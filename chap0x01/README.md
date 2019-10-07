@@ -37,13 +37,13 @@
 ![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/6.JPG)
 
     - 配置XP系统环境的victim2，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet2，再将高级中的控制芯片换为PCnet-Fast III (Am79c973) 。（原因：使XP-victim2只在intnet2的局域网中通过网关访问外部网络；XP的版本太低，要选择适配的网卡驱动）
-    （此处插入7.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/7.JPG)
 
     - 配置XP系统环境的victim2，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet2，再将高级中的控制芯片换为PCnet-Fast III (Am79c973) 。（原因：使XP-victim2只在intnet2的局域网中通过网关访问外部网络；XP的版本太低，要选择适配的网卡驱动）
-    （此处插入8.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/8.JPG)
 
     - 配置Debian环境的victim2，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet2。（原因：使XP-victim2只在intnet2的局域网中通过网关访问外部网络）
-    （此处插入9.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/9.JPG)
 
 3. 虚拟机的存储部分，将端口的部分全部设置为多重加载，示例如图9。
     - 步骤：打开虚拟介质管理器，选择对应系统的虚拟盘，将属性中的类型改为多重加载，选择释放虚拟盘，再一次将虚拟盘挂载到虚拟机即可。
@@ -61,12 +61,29 @@
 
 2. 对网络拓扑结构的逐一验证
     - 靶机可以直接访问攻击者主机。如图11、图12、图13、图14所示。
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/11.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/12.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/13.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/14.JPG)
 
     - 攻击者主机无法直接访问靶机。如图15、图16、图17、图18所示。
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/15.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/16.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/17.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/18.JPG)
 
     - 网关可以直接访问攻击者主机和靶机。如图19、图20、图21、图22、图23所示。
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/19.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/20.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/21.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/22.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/23.JPG)
 
     - 靶机的所有对外上下行流量必须经过网关。抓包验证如图24、图25、图26、图27所示。
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/24.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/25.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/26.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/27.JPG)
 
     - 所有节点均可以访问互联网。  
     据验证，所有靶机可通过网关访问互联网。  
