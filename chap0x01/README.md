@@ -14,27 +14,27 @@
     - 靶机（Victim）：Debian Buster/xp-sp3 / Kali
 
 2. 局域网、互联网环境，实验需要构建的网络拓扑结构如图1所示。
-![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/1.JPG)
+
 3. 接入条件：Wi-Fi
 
 ## **三、实验步骤**
 
 1. 在VirtualBox中一共新建六个虚拟机，如图2所示：
     - 新建两个kali虚拟机，其中一个作为攻击者，命名为KaliAttacker，另一个作为靶机之一；再建立两个Debian虚拟机，其中一个作为网关建立局域网使用，另一个作为靶机之一；建立两个xp-sp3虚拟机，均作为靶机。
-    （此处插入2.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/2.JPG)
 
 2. 对每一台虚拟机的网络进行配置，如图3、图4、图5、图6、图7、图8标注的红框部分所示：
     - 首先配置Kali-Attacker，在虚拟机的设置-网络中启用网卡1的网络链接，将链接方式更改为NAT网络。界面名称选择NatNetwork。（选择NAT网络的原因：是虚拟机访问外网的最好方式）
-    （此处插入3.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/3.JPG)
 
     - 配置Debian-Gateway，在虚拟机的设置-网络中启用网卡1的网络链接，将链接方式更改为NAT网络。界面名称选择NatNetwork；再启用网卡3、网卡4的网络链接，均将链接方式改为内部网络，其中，网卡3的界面名称改为intnet1，网卡4的界面名称改为intnet2。（使用NAT网络的原因：将网关与攻击者放在同一虚拟网络中；使用内网原因：分别建立局域网intnet1、intnet2以构建实验要求的基本拓扑结构）
-    （此处插入4.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/4.JPG)
 
     - 配置kali环境的victim1，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet1。（原因：使kali-victim1只在intnet1的局域网中通过网关访问外部网络）
-    （此处插入5.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/5.JPG)
 
     - 配置XP系统环境的victim1，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet1。（原因：使XP-victim1只在intnet1的局域网中通过网关访问外部网络）
-    （此处插入5.jpg）
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/6.JPG)
 
     - 配置XP系统环境的victim2，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet2，再将高级中的控制芯片换为PCnet-Fast III (Am79c973) 。（原因：使XP-victim2只在intnet2的局域网中通过网关访问外部网络；XP的版本太低，要选择适配的网卡驱动）
     （此处插入7.jpg）
