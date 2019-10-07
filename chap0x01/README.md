@@ -14,6 +14,7 @@
     - 靶机（Victim）：Debian Buster/xp-sp3 / Kali
 
 2. 局域网、互联网环境，实验需要构建的网络拓扑结构如图1所示。
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/1.JPG)
 
 3. 接入条件：Wi-Fi
 
@@ -39,14 +40,12 @@
     - 配置XP系统环境的victim2，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet2，再将高级中的控制芯片换为PCnet-Fast III (Am79c973) 。（原因：使XP-victim2只在intnet2的局域网中通过网关访问外部网络；XP的版本太低，要选择适配的网卡驱动）
 ![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/7.JPG)
 
-    - 配置XP系统环境的victim2，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet2，再将高级中的控制芯片换为PCnet-Fast III (Am79c973) 。（原因：使XP-victim2只在intnet2的局域网中通过网关访问外部网络；XP的版本太低，要选择适配的网卡驱动）
-![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/8.JPG)
-
     - 配置Debian环境的victim2，虚拟机的设置-网络中启用网卡1的网络链接，将链接方式改为内部网络，界面名称改为intnet2。（原因：使XP-victim2只在intnet2的局域网中通过网关访问外部网络）
-![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/9.JPG)
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/8.JPG)
 
 3. 虚拟机的存储部分，将端口的部分全部设置为多重加载，示例如图9。
     - 步骤：打开虚拟介质管理器，选择对应系统的虚拟盘，将属性中的类型改为多重加载，选择释放虚拟盘，再一次将虚拟盘挂载到虚拟机即可。
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/9.JPG)
 
     - 设置多重加载的原因：设置同样系统的虚拟机的时候节省重新安装系统的时间。
 
@@ -58,6 +57,7 @@
 ## **四、实验结果**
 
 1. 最终构建的网络拓扑结构如图10所示
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/10.JPG)
 
 2. 对网络拓扑结构的逐一验证
     - 靶机可以直接访问攻击者主机。如图11、图12、图13、图14所示。
