@@ -14,7 +14,7 @@
     - 靶机（Victim）：Debian Buster/xp-sp3 / Kali
 
 2. 局域网、互联网环境，实验需要构建的网络拓扑结构如图1所示。
-
+![Alt text](https://github.com/CUCCS/2019-NS-Public-laysheepunicorn/blob/chap0x01/chap0x01/img/1.JPG)
 3. 接入条件：Wi-Fi
 
 ## **三、实验步骤**
